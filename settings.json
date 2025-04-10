@@ -1,0 +1,36 @@
+{
+    "workbench.colorTheme" : "Night Owl",
+    "editor.accessibilitySupport" : "off",
+    "editor.fontSize" : 15,
+    "settingsSync.ignoredExtensions" : [
+        "ms-vscode.powershell"
+    ],
+    "editor.maxTokenizationLineLength" : 75000,
+    "vsicons.dontShowNewVersionMessage" : true,
+    "editor.fontFamily" : "MonoLisa, Menlo, Consolas, 'Courier New', monospace",
+    "cmake.platform" : "",
+    "editor.inlineSuggest.enabled" : true,
+    "json.maxItemsComputed" : 50000,
+    "diffEditor.ignoreTrimWhitespace" : false,
+    "git.autofetch" : true,
+    "cmake.configureOnOpen": true,
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+    "editor.largeFileOptimizations": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.fontVariations": false,
+    "editor.fontLigatures": "'ss11' on, 'ss18' on, 'zero' on",
+    "editor.fontWeight": "normal",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.minimap.autohide": true,
+    "workbench.preferredDarkColorTheme": "Night Owl",
+    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.view.alwaysShowHeaderActions": true,
+    "telemetry.telemetryLevel": "off"
+}
