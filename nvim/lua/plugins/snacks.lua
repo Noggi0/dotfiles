@@ -36,5 +36,8 @@ return {
 				},
 			},
 		},
+		notifier = {
+			timeout = 7000,
+		},
 	},
 }

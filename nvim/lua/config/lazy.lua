@@ -14,7 +14,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	end
 end
 vim.opt.rtp:prepend(lazypath)
-
+vim.filetype.add({
+	extension = {
+		tpl = "html",
+	},
+})
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
@@ -26,5 +30,5 @@ require("lazy").setup({
 	-- colorscheme that will be used when installing plugins.
 	install = { colorscheme = { "night-owl" } },
 	-- automatically check for plugin updates
-	checker = { enabled = true },
+	checker = { enabled = false },
 })

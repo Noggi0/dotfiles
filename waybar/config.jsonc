@@ -20,7 +20,7 @@
     	"custom/spacer1",
     	"temperature",
     	"custom/spacer1",
-	"memory#ram",
+        "memory#ram",
     	"custom/spacer1",
     	// Don't care for now "disk",
     	//"custom/spacer1",
@@ -32,13 +32,13 @@
     	"custom/spacer1",
     	"hyprland/language",
     	"custom/spacer1",
-    	"backlight",
-    	"custom/spacer1",
+    	// "backlight",
+    	// "custom/spacer1",
     	"battery",
-    	"custom/spacer1",		
+    	"custom/spacer1",
     	"clock",
-	"custom/spacer1",
-	"custom/power"
+        "custom/spacer1",
+        "custom/power"
   ],
   // Modules
   "disk": {
@@ -110,12 +110,12 @@
   },
   "hyprland/language": {
 	"format": " {}",
-    	"format-en-intl": "English INTL",
-	"format-fr": "Français",
-	"min-length": 7,
+    "format-en-intl": "EN",
+	"format-fr": "FR",
+	"min-length": 2,
 	"on-click": "hyprctl switchxkblayout current next",
 	"tooltip": false,
-    	"class": "language"
+    "class": "language"
   },
   "memory#ram": {
 	"interval": 5,
@@ -136,9 +136,9 @@
   "network#info": {
 	"interval": 1,
 	"format": "󱘖 Offline",
-	"format-wifi": "{icon}{bandwidthDownBits}",
+	"format-wifi": "{icon}", // {bandwidthDownBits}
 	"format-ethernet": "󰈀 {bandwidthDownBits}",
-	"min-length": 9,
+	// "min-length": 9,
     	"tooltip": "{}",
     	"tooltip-format-wifi": "{essid}\n{signalStrength}% \n{frequency} GHz\n󰇚 {bandwidthDownBits}\n󰕒 {bandwidthUpBits}",
     	"tooltip-format-ethernet": "{ifname}\n󰇚 {bandwidthDownBits} \n󰕒 {bandwidthUpBits}",
@@ -172,7 +172,7 @@
   },
   "hyprland/window": {
 	"format": "{title}",
-	"max-length": 48,
+	"max-length": 28,
 	"tooltip": false,
 	"icon": true,
 	"icon-size": 18

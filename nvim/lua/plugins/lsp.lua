@@ -1,43 +1,34 @@
 return {
-
 	{
 		"williamboman/mason.nvim",
 		lazy = false,
-		opts = {},
+		opts = {
+			ui = {
+				icons = {
+					package_installed = "✓",
+					package_pending = "➜",
+					package_uninstalled = "✗",
+				},
+				border = "rounded",
+			},
+		},
 	},
 
-	-- Autocompletion
+	-- Blink Autocompletion
 	{
-		"hrsh7th/nvim-cmp",
-		dependencies = {
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "hrsh7th/cmp-cmdline" },
+		"saghen/blink.cmp",
+		enabled = true,
+		version = "1.*",
+		opts = {
+			appearance = {
+				nerd_font_variant = "mono",
+			},
+			fuzzy = { implementation = "lua" },
+			signature = {
+				enabled = true,
+				window = { show_documentation = false },
+			},
 		},
-		event = "InsertEnter",
-		opts = function()
-			local cmp = require("cmp")
-
-			cmp.setup({
-				sources = {
-					{ name = "cmp_nvim_lsp" },
-					{ name = "buffer" },
-					{ name = "cmdline" },
-					{ name = "path" },
-				},
-				mapping = cmp.mapping.preset.insert({
-					["<S-Tab>"] = cmp.mapping.complete(),
-					["<C-u>"] = cmp.mapping.scroll_docs(-4),
-					["<C-d>"] = cmp.mapping.scroll_docs(4),
-				}),
-				snippet = {
-					expand = function(args)
-						vim.snippet.expand(args.body)
-					end,
-				},
-			})
-		end,
 	},
 
 	-- LSP
@@ -46,7 +37,7 @@ return {
 		cmd = { "LspInfo", "LspInstall", "LspStart" },
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
-			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "saghen/blink.cmp" },
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
 		},
@@ -61,7 +52,7 @@ return {
 			-- Add cmp_nvim_lsp capabilities settings to lspconfig
 			-- This should be executed before you configure any language server
 			lsp_defaults.capabilities =
-				vim.tbl_deep_extend("force", lsp_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
+				vim.tbl_deep_extend("force", lsp_defaults.capabilities, require("blink.cmp").get_lsp_capabilities())
 
 			-- LspAttach is where you enable features that only work
 			-- if there is a language server active in the file
