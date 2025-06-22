@@ -138,11 +138,12 @@
 	"format": "󱘖 Offline",
 	"format-wifi": "{icon}", // {bandwidthDownBits}
 	"format-ethernet": "󰈀 {bandwidthDownBits}",
+    "tooltip": false,
 	// "min-length": 9,
-    	"tooltip": "{}",
-    	"tooltip-format-wifi": "{essid}\n{signalStrength}% \n{frequency} GHz\n󰇚 {bandwidthDownBits}\n󰕒 {bandwidthUpBits}",
-    	"tooltip-format-ethernet": "{ifname}\n󰇚 {bandwidthDownBits} \n󰕒 {bandwidthUpBits}",
-	"on-click": "iwgtk",
+    //	"tooltip": "{}",
+    //	"tooltip-format-wifi": "{essid}\n{signalStrength}% \n{frequency} GHz\n󰇚 {bandwidthDownBits}\n󰕒 {bandwidthUpBits}",
+    //	"tooltip-format-ethernet": "{ifname}\n󰇚 {bandwidthDownBits} \n󰕒 {bandwidthUpBits}",
+	"on-click": "~/.config/scripts/wifi-menu.sh",
 	"format-icons": [
 		"󰤫 ",
 		"󰤟 ",

@@ -1,0 +1,16 @@
+* {
+    font:   "MonoLisa Nerd Font 14";
+
+    dark-blue:      #011627;
+    light-blue:     #1b90dd4d;
+    red:            #dc5367;
+    grey:           #637777;
+
+    white:     #eeffff;
+
+    background-color:   transparent;
+    text-color:         @white;
+    margin:     0;
+    padding:    0;
+    spacing:    3;
+}
